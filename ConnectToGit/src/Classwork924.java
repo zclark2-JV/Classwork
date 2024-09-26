@@ -19,7 +19,7 @@ public class Classwork924 {
 		for (double num : numBank) {
 			sum+=num;
 		}
-		System.out.println("This is the sum of your entered values: "+sum);
+		System.out.println("This is the sum of your entered valuess: "+sum);
 	}
 
 }

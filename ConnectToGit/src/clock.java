@@ -1,4 +1,4 @@
-//test
+
 public class clock {
 	//instance variables
 	private int hr;
