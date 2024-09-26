@@ -5,13 +5,14 @@ public class clock {
 	private int min;
 	private int sec;
 	
-	//constructor method
+	//constructor method | must be called same as class
 	public clock() {
-		hr=0;
-		min=0;
-		sec=0;
+		setTime(0, 0, 0);
 	}
 	public clock(int hours, int minutes, int seconds) {
+		setTime(hours, minutes, seconds);
+	}
+	public void setTime(int hours, int minutes, int seconds) {
 		hr=hours;
 		min=minutes;
 		sec=seconds;
