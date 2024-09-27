@@ -25,7 +25,7 @@ public class critter {
 	}
 	//regular method
 	public void pInfo() {
-		System.out.print(critInfo+"hey");
+		System.out.print(critInfo);
 	}
 
 }
