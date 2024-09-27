@@ -6,7 +6,7 @@ public class critter {
 	public String critInfo;
 	
 	//constructor methods
-	public critter(String critName, String critMood) {
+	public critter() {
 		setName("Steve");
 		setMood("Tired");
 	}
@@ -16,11 +16,18 @@ public class critter {
 	public void setMood(String uMood) {
 		critMood=uMood;
 	}
+	//getter--accessor methods
+	public String getName() {
+		return critName;
+	}
+	public String getMood() {
+		return critMood;
+	}
 	//to string: override
 	public String toString() {
-		String critInfo = "** Your New Critter **\n";
-		critInfo+=critName+"Your Critter's Name: ";
-		critInfo+=critMood+"Your Critter's Mood: ";
+		String critInfo = "** Your New Critter **";
+		critInfo+="\nYour Critter's Name: "+critName;
+		critInfo+="\nYour Critter's Mood: "+critMood;
 		return critInfo;
 	}
 	//regular method
