@@ -11,13 +11,15 @@ public class readWrite {
 		double sum=0;
 		int count=0;
 		
-		Scanner inFile = new Scanner("/Users/zac/git/Classwork/ConnectToGit/src/studentData");
-		PrintWriter outFile=new PrintWriter("/Users/zac/git/Classwork/ConnectToGit/src/studentDataResults");
+		Scanner inFile = new Scanner(new FileReader("/Users/zac/git/Classwork/ConnectToGit/src/studentData"));
+		PrintWriter outFile=new PrintWriter(new PrintWriter("/Users/zac/git/Classwork/ConnectToGit/src/studentDataResults"));
 		
 		while (inFile.hasNext()) {
 			firstName=inFile.next();
 			lastName=inFile.next();
 			testScore=inFile.nextDouble();
+			count++;
+			sum+=testScore;
 			switch((int)testScore/10) {
 			case 0:
 			case 1:
@@ -28,25 +30,28 @@ public class readWrite {
 				grade='F';
 				break;
 			case 6:
-				grade='E';
-				break;
-			case 7:
 				grade='D';
 				break;
-			case 8:
+			case 7:
 				grade='C';
 				break;
-			case 9:
+			case 8:
 				grade='B';
 				break;
+			case 9:
 			case 10:
 				grade='A';
 				break;
 			default:
 				System.out.println("Invalid Score");
 			}
-			outFile.print(grade);
+			outFile.printf("%-12s %-12s %.2f %c %n", firstName, lastName, testScore, grade);
 		}
+		outFile.println();
+		if(count!=0)
+			outFile.printf("Class Average %.2f %n", sum/count);
+		else
+			outFile.println("No Data");
 		outFile.close();
 		inFile.close();
 
