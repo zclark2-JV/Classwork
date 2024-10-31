@@ -5,7 +5,7 @@ public class readFile {
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("Current working directory: " + System.getProperty("user.dir"));
 
-		Scanner inFile = new Scanner(new FileReader("payroll.txt"));
+		Scanner inFile = new Scanner(new FileReader("/Users/zac/git/Classwork/ConnectToGit/src/payroll"));
 		String firstName;
 		String lastName;
 		double wages;
