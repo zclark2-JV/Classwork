@@ -4,6 +4,11 @@ public class readFile {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner inFile = new Scanner(new FileReader("payroll.txt"));
+		String firstName;
+		String lastName;
+		double hoursWorked;
+		double payRate;
+		
 		
 	}
 
